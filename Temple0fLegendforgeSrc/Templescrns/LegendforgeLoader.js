@@ -58,7 +58,7 @@ const LegendforgeLoader = () => {
         <View style={{ alignItems: 'center', marginTop: height * 0.1 }}>
           <Image
             source={require('../assets/images/loader_logo.png')}
-            style={{ marginBottom: 120, width: 358, height: 128 }}
+            style={{ marginBottom: 120, width: 358, height: 148 }}
           />
         </View>
         <View style={styles.amzBox}>

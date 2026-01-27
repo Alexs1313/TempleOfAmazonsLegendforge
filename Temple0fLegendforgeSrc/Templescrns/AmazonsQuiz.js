@@ -11,7 +11,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { quizQuestions } from '../TempleOfAmazonsData/quizQuestions';
+import { quizQuestions } from '../Templedta/quizQuestions';
 
 const BUTTON_GRADIENT = ['#FF9400', '#FAD51D'];
 const QUESTIONS_PER_QUIZ = 12;

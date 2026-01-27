@@ -10,7 +10,7 @@ import {
   ScrollView,
   useWindowDimensions,
 } from 'react-native';
-import { libraryStories } from '../TempleOfAmazonsData/libraryStories';
+import { libraryStories } from '../Templedta/libraryStories';
 
 const bgImage = require('../assets/images/main_background.png');
 

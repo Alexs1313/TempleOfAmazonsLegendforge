@@ -1,14 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
 // imports
-import LegendforgeOnboarding from '../TempleScreens/LegendforgeOnboarding';
+import LegendforgeOnboarding from '../Templescrns/LegendforgeOnboarding';
 import BottomLegendforgeTabs from './BottomLegendforgeTabs';
-import StoryDetailsScreen from '../TempleScreens/StoryDetailsScreen';
-import CreateCharacterScreen from '../TempleScreens/CreateCharacterScreen';
-import CharacterDetailsScreen from '../TempleScreens/CharacterDetailsScreen';
-import CreateStoryScreen from '../TempleScreens/CreateStoryScreen';
-import LegendforgeDetailsScreen from '../TempleScreens/LegendforgeDetailsScreen';
-import LegendforgeLoader from '../TempleScreens/LegendforgeLoader';
+import StoryDetailsScreen from '../Templescrns/StoryDetailsScreen';
+import CreateCharacterScreen from '../Templescrns/CreateCharacterScreen';
+import CharacterDetailsScreen from '../Templescrns/CharacterDetailsScreen';
+import CreateStoryScreen from '../Templescrns/CreateStoryScreen';
+import LegendforgeDetailsScreen from '../Templescrns/LegendforgeDetailsScreen';
+import LegendforgeLoader from '../Templescrns/LegendforgeLoader';
 
 const Stack = createStackNavigator();
 

@@ -137,7 +137,7 @@ const SettingsScreen = () => {
             style={styles.boxWrap}
             onPress={() =>
               Linking.openURL(
-                'https://www.termsfeed.com/live/926e3eab-569a-42d0-92ab-4351507028aa',
+                'https://www.termsfeed.com/live/3b01a9ea-0cbf-4c49-a6a3-803772427d0b',
               )
             }
           >
