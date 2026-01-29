@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
-import LegendforgeStack from './Temple0fLegendforgeSrc/Legendforgenvg/LegendforgeStack';
-import { StoreProvider } from './Temple0fLegendforgeSrc/LegendforgeStore/amazonsCntxt';
+import LegendforgeStack from './_0xLGndSrc/_0xLGndnaV/LegendforgeStack';
+import { StoreProvider } from './_0xLGndSrc/_0xLGndstr/amazonsCntxt';
 import Toast from 'react-native-toast-message';
 
 const App = () => {

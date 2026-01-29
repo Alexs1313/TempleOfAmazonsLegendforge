@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet } from 'react-native';
-import CharactersScreen from '../Templescrns/CharactersScreen';
-import LegendforgeScreen from '../Templescrns/LegendforgeScreen';
-import TempleLibrary from '../Templescrns/TempleLibrary';
-import AmazonsQuiz from '../Templescrns/AmazonsQuiz';
-import TempleSettingsScreen from '../Templescrns/TempleSettingsScreen';
+import CharactersScreen from '../_0xLGndscrnS/CharactersScreen';
+import LegendforgeScreen from '../_0xLGndscrnS/LegendforgeScreen';
+import TempleLibrary from '../_0xLGndscrnS/TempleLibrary';
+import AmazonsQuiz from '../_0xLGndscrnS/AmazonsQuiz';
+import TempleSettingsScreen from '../_0xLGndscrnS/TempleSettingsScreen';
 
 const Tab = createBottomTabNavigator();
 

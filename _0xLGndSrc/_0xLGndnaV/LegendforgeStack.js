@@ -1,14 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
 // imports
-import LegendforgeOnboarding from '../Templescrns/LegendforgeOnboarding';
+import LegendforgeOnboarding from '../_0xLGndscrnS/LegendforgeOnboarding';
 import BottomLegendforgeTabs from './BottomLegendforgeTabs';
-import StoryDetailsScreen from '../Templescrns/StoryDetailsScreen';
-import CreateCharacterScreen from '../Templescrns/CreateCharacterScreen';
-import CharacterDetailsScreen from '../Templescrns/CharacterDetailsScreen';
-import CreateStoryScreen from '../Templescrns/CreateStoryScreen';
-import LegendforgeDetailsScreen from '../Templescrns/LegendforgeDetailsScreen';
-import LegendforgeLoader from '../Templescrns/LegendforgeLoader';
+import StoryDetailsScreen from '../_0xLGndscrnS/StoryDetailsScreen';
+import CreateCharacterScreen from '../_0xLGndscrnS/CreateCharacterScreen';
+import CharacterDetailsScreen from '../_0xLGndscrnS/CharacterDetailsScreen';
+import CreateStoryScreen from '../_0xLGndscrnS/CreateStoryScreen';
+import LegendforgeDetailsScreen from '../_0xLGndscrnS/LegendforgeDetailsScreen';
+import LegendforgeLoader from '../_0xLGndscrnS/LegendforgeLoader';
 
 const Stack = createStackNavigator();
 
@@ -19,8 +19,8 @@ const LegendforgeStack = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="LegendforgeLoader" component={LegendforgeLoader} />
       <Stack.Screen
-        name="LegendforgeOnboarding"
-        component={LegendforgeOnboarding}
+        name="LegendforgeOnboardig"
+        component={LegendforgeOnboardig}
       />
       <Stack.Screen
         name="BottomLegendforgeTabs"
