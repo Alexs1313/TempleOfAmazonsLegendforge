@@ -22,7 +22,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Sound from 'react-native-sound';
 
-import { useAmazonsStore as _uAS_2Rm9xQpLzT7nVaKs } from '../_0xLGndstr/amazonsCntxt';
+import { useAmazonsStore } from '../_0xLGndstr/amazonsCntxt';
 import Toast from 'react-native-toast-message';
 
 const _bG_7qPzLxVnT3mA9rKb = ['#FF9400', '#FAD51D'];
@@ -48,7 +48,7 @@ const CharactersScreen = () => {
     legendforgeSoundEnabled: _sE_9tVmQpLxZ7nR3aKs,
     setLegendforgeSoundEnabled: _sSE_4pLxQnZ8tVmR2aKs,
     legendforgeNotificationsEnabled: _nE_2Rm9xQpLzT7nVaKs,
-  } = _uAS_2Rm9xQpLzT7nVaKs();
+  } = useAmazonsStore();
 
   const _ls_7qPzLxVnT3mA9rKb = _uCB_7qPzLxVnT3mA9rKb(async () => {
     try {

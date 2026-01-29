@@ -14,7 +14,7 @@ import { launchImageLibrary as _lIL_9xQmTrL7pZaVnK4s } from 'react-native-image-
 import { ScrollView as _sCv_9xQmTrL7pZaVnK4s } from 'react-native-gesture-handler';
 import { useNavigation as _uNV_9xQmTrL7pZaVnK4s } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useAmazonsStore as _uAS_2Rm9xQpLzT7nVaKs } from '../_0xLGndstr/amazonsCntxt';
+import { useAmazonsStore } from '../_0xLGndstr/amazonsCntxt';
 import Toast from 'react-native-toast-message';
 
 const _bG_7qPzLxVnT3mA9rKb = ['#FF9400', '#FAD51D'];
@@ -103,7 +103,7 @@ const CreateCharacterScreen = () => {
 
   const _nv_9xQmTrL7pZaVnK4s = _uNV_9xQmTrL7pZaVnK4s();
   const { legendforgeNotificationsEnabled: _nE_7nR3aKsQpLxV8tZm } =
-    _uAS_2Rm9xQpLzT7nVaKs();
+    useAmazonsStore();
 
   const _sF_1VaKsQpLxT7nR9mZ2 = (_k_6tVmQpLxZ7nR3aKs, _v_9tVmQpLxZ7nR3aKs) => {
     _sDrt_2Rm9xQpLzT7nVaKs(true);

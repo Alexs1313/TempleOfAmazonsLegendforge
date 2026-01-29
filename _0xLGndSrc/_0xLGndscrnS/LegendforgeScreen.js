@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useAmazonsStore as _uAS_4pLxQnZ8tVmR2aKs } from '../_0xLGndstr/amazonsCntxt';
+import { useAmazonsStore } from '../_0xLGndstr/amazonsCntxt';
 import Toast from 'react-native-toast-message';
 
 const _bGr_9xQmTrL7pZaVnK4s = ['#FF9400', '#FAD51D'];
@@ -32,7 +32,7 @@ const LegendforgeScreen = () => {
     [],
   );
   const { legendforgeNotificationsEnabled: _nt_4pLxQnZ8tVmR2aKs } =
-    _uAS_4pLxQnZ8tVmR2aKs();
+    useAmazonsStore();
 
   _uFE_1VaKsQpLxT7nR9mZ2(
     _uCB_7qPzLxVnT3mA9rKb(() => {

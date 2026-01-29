@@ -13,7 +13,7 @@ import {
   useWindowDimensions as _uWD_2Rm9xQpLzT7nVaKs,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useAmazonsStore as _uAS_4pLxQnZ8tVmR2aKs } from '../LegendforgeStore/amazonsCntxt';
+import { useAmazonsStore } from '../LegendforgeStore/amazonsCntxt';
 import Toast from 'react-native-toast-message';
 
 const _bg_6tVmQpLxZ7nR3aKs = require('../assets/images/main_background.png');
@@ -25,7 +25,7 @@ const TempleSettingsScreen = () => {
     setLegendforgeNotificationsEnabled: _sNf_4pLxQnZ8tVmR2aKs,
     legendforgeSoundEnabled: _sd_9tVmQpLxZ7nR3aKs,
     setLegendforgeSoundEnabled: _sSd_2Rm9xQpLzT7nVaKs,
-  } = _uAS_4pLxQnZ8tVmR2aKs();
+  } = useAmazonsStore();
 
   const { height: _ht_6mQpZtLxV8nR3aKs } = _uWD_2Rm9xQpLzT7nVaKs();
 
