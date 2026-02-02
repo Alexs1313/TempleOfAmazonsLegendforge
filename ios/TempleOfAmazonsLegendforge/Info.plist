@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Amaz0ns: Legendforge of Temple</string>
+	<string>Аmaz0ns: Lеgеndfоrgе оf Теmрlе</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Amaz0nsLegendforgeOfTemple</string>
+	<string>com.LegendforgeOfTemple</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

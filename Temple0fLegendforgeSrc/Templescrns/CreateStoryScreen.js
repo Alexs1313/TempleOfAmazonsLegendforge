@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   selector: {
     backgroundColor: '#1F1B1D',
     borderRadius: 14,
-    padding: 6,
+    padding: 12,
     paddingHorizontal: 12,
     flexDirection: 'row',
     alignItems: 'center',
