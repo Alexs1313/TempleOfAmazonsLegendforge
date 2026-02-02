@@ -30,7 +30,7 @@ const SettingsScreen = () => {
 
   const onShare = () => {
     Linking.openURL(
-      'https://apps.apple.com/us/app/amazins-legendforge-of-temple/id6758200045',
+      'https://apps.apple.com/us/app/%D0%B0maz0ns-l%D0%B5g%D0%B5ndf%D0%BErg%D0%B5-%D0%BEf-%D1%82%D0%B5m%D1%80l%D0%B5/id6758622911',
     );
   };
 
