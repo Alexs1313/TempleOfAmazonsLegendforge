@@ -1,19 +1,19 @@
 workflows:
   ios-workflow:
-    name: 'Аmaz0ns: Lеgеndfоrgе оf Теmрlе'
+    name: 'Аmаs0ns: Legendforge of Temple'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: LegendforgeOfTempleAPIKey
+      app_store_connect: LegendforgeAPIKey
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.LegendforgeOfTemple
+        bundle_identifier: com.LegendforgeNewBundleID
       vars:
-        BUNDLE_ID: com.LegendforgeOfTemple
+        BUNDLE_ID: com.LegendforgeNewBundleID
         XCODE_WORKSPACE: TempleOfAmazonsLegendforge.xcworkspace
         XCODE_SCHEME: TempleOfAmazonsLegendforge
-        APP_STORE_APPLE_ID: 6758622911
+        APP_STORE_APPLE_ID: 6759379999
     scripts:
       - name: Install npm dependencies
         script: |
@@ -44,4 +44,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: 'Аmaz0ns: Lеgеndfоrgе оf Теmрlе 2026'
+        copyright: 'Аmаs0ns: Legendforge of Temple 2026'
