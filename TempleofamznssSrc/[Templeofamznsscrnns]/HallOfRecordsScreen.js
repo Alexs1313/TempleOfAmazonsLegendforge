@@ -6,7 +6,6 @@ import React, { useState, useCallback, useMemo, useRef } from 'react';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
-  Animated,
   View,
   Text,
   StyleSheet,
@@ -98,9 +97,7 @@ const HallOfRecordsScreen = () => {
   });
   const [demoCleared, setDemoCleared] = useState(false);
   const [loading, setLoading] = useState(true);
-  const LegendforgeTempleCardsAppearAnimations = useRef(
-    Array.from({ length: 4 }, () => new Animated.Value(0)),
-  ).current;
+  // animation values removed; cards will display statically
 
   const demoStats = useMemo(() => getRandomDemoStats(), []);
 
@@ -139,23 +136,6 @@ const HallOfRecordsScreen = () => {
     }, [loadStats]),
   );
 
-  useFocusEffect(
-    useCallback(() => {
-      LegendforgeTempleCardsAppearAnimations.forEach(anim => anim.setValue(0));
-
-      const LegendforgeTempleCardAnimations =
-        LegendforgeTempleCardsAppearAnimations.map(anim =>
-          Animated.timing(anim, {
-            toValue: 1,
-            duration: 360,
-            useNativeDriver: true,
-          }),
-        );
-
-      Animated.stagger(110, LegendforgeTempleCardAnimations).start();
-    }, [LegendforgeTempleCardsAppearAnimations]),
-  );
-
   const hasAnyRealStats =
     realStats.amazonsForged > 0 ||
     realStats.storiesWritten > 0 ||
@@ -192,22 +172,10 @@ const HallOfRecordsScreen = () => {
   const bannerPad = pick(4, 6, 7);
   const cardPad = pick(14, 16, 18);
   const cardRadius = pick(14, 16, 18);
-  const cardTitleSize = pick(10, 11, 12);
+  const cardTitleSize = pick(9, 9, 10);
   const cardValueSize = pick(13, 14, 15);
-  const sectionTitleSize = pick(18, 20, 22);
-  const cardAppearFromY = pick(18, 20, 22);
 
-  const getLegendforgeTempleCardAnimatedStyle = index => ({
-    opacity: LegendforgeTempleCardsAppearAnimations[index],
-    transform: [
-      {
-        translateY: LegendforgeTempleCardsAppearAnimations[index].interpolate({
-          inputRange: [0, 1],
-          outputRange: [cardAppearFromY, 0],
-        }),
-      },
-    ],
-  });
+  // cardAppearFromY and animated style helper removed
 
   if (loading) {
     return (
@@ -273,17 +241,23 @@ const HallOfRecordsScreen = () => {
               onPress={clearDemo}
               style={styles.templeLegendClearDemoBtn}
             >
-              <Text style={styles.templeLegendClearDemoText}>Clear demo data</Text>
+              <Text style={styles.templeLegendClearDemoText}>
+                Clear demo data
+              </Text>
             </TouchableOpacity>
           </View>
         )}
 
-        <View style={[styles.templeLegendCardsGrid, { paddingHorizontal: headerPadH }]}>
-          <Animated.View
+        <View
+          style={[
+            styles.templeLegendCardsGrid,
+            { paddingHorizontal: headerPadH },
+          ]}
+        >
+          <View
             style={[
               styles.templeLegendStatCard,
               { padding: cardPad, borderRadius: cardRadius },
-              getLegendforgeTempleCardAnimatedStyle(0),
             ]}
           >
             <Image
@@ -291,20 +265,29 @@ const HallOfRecordsScreen = () => {
               style={styles.templeLegendCardIcon}
             />
             <View>
-              <Text style={[styles.templeLegendStatValue, { fontSize: cardValueSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatValue,
+                  { fontSize: cardValueSize },
+                ]}
+              >
                 {stats.amazonsForged} Amazons
               </Text>
-              <Text style={[styles.templeLegendStatLabel, { fontSize: cardTitleSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatLabel,
+                  { fontSize: cardTitleSize },
+                ]}
+              >
                 Amazons Forged
               </Text>
             </View>
-          </Animated.View>
+          </View>
 
-          <Animated.View
+          <View
             style={[
               styles.templeLegendStatCard,
               { padding: cardPad, borderRadius: cardRadius },
-              getLegendforgeTempleCardAnimatedStyle(1),
             ]}
           >
             <Image
@@ -312,20 +295,29 @@ const HallOfRecordsScreen = () => {
               style={styles.templeLegendCardIcon}
             />
             <View>
-              <Text style={[styles.templeLegendStatValue, { fontSize: cardValueSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatValue,
+                  { fontSize: cardValueSize },
+                ]}
+              >
                 {stats.storiesWritten} Stories
               </Text>
-              <Text style={[styles.templeLegendStatLabel, { fontSize: cardTitleSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatLabel,
+                  { fontSize: cardTitleSize },
+                ]}
+              >
                 Stories Written
               </Text>
             </View>
-          </Animated.View>
+          </View>
 
-          <Animated.View
+          <View
             style={[
               styles.templeLegendStatCard,
               { padding: cardPad, borderRadius: cardRadius },
-              getLegendforgeTempleCardAnimatedStyle(2),
             ]}
           >
             <Image
@@ -333,20 +325,29 @@ const HallOfRecordsScreen = () => {
               style={styles.templeLegendCardIcon}
             />
             <View>
-              <Text style={[styles.templeLegendStatValue, { fontSize: cardValueSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatValue,
+                  { fontSize: cardValueSize },
+                ]}
+              >
                 {stats.wordsWritten}
               </Text>
-              <Text style={[styles.templeLegendStatLabel, { fontSize: cardTitleSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatLabel,
+                  { fontSize: cardTitleSize },
+                ]}
+              >
                 Words Written
               </Text>
             </View>
-          </Animated.View>
+          </View>
 
-          <Animated.View
+          <View
             style={[
               styles.templeLegendStatCard,
               { padding: cardPad, borderRadius: cardRadius },
-              getLegendforgeTempleCardAnimatedStyle(3),
             ]}
           >
             <Image
@@ -354,17 +355,32 @@ const HallOfRecordsScreen = () => {
               style={styles.templeLegendCardIcon}
             />
             <View>
-              <Text style={[styles.templeLegendStatValue, { fontSize: cardValueSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatValue,
+                  { fontSize: cardValueSize },
+                ]}
+              >
                 {stats.trialsCompleted}
               </Text>
-              <Text style={[styles.templeLegendStatLabel, { fontSize: cardTitleSize }]}>
+              <Text
+                style={[
+                  styles.templeLegendStatLabel,
+                  { fontSize: cardTitleSize },
+                ]}
+              >
                 Trials Completed
               </Text>
             </View>
-          </Animated.View>
+          </View>
         </View>
 
-        <View style={[styles.templeLegendOathSection, { paddingHorizontal: headerPadH }]}>
+        <View
+          style={[
+            styles.templeLegendOathSection,
+            { paddingHorizontal: headerPadH },
+          ]}
+        >
           <Image
             source={require('../assets/images/ofocus.png')}
             style={{ marginBottom: 24 }}
@@ -389,7 +405,11 @@ const HallOfRecordsScreen = () => {
 
 const styles = StyleSheet.create({
   templeLegendContainer: { flex: 1 },
-  templeLegendCentered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  templeLegendCentered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   templeLegendScroll: { flexGrow: 1, paddingBottom: 100 },
   templeLegendHeader: {
     flexDirection: 'row',
@@ -413,7 +433,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 20,
   },
-  templeLegendDemoBannerText: { color: '#fff', fontSize: 15, fontWeight: '600' },
+  templeLegendDemoBannerText: {
+    color: '#fff',
+    fontSize: 15,
+    fontWeight: '600',
+  },
   templeLegendClearDemoBtn: {
     paddingVertical: 4,
     paddingHorizontal: 12,
@@ -448,18 +472,26 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.8)',
     textAlign: 'center',
     marginTop: 4,
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '500',
   },
   templeLegendOathSection: { marginBottom: 24 },
-  templeLegendOathTitle: { color: TITLE_COLOR, fontWeight: '700', marginBottom: 16 },
+  templeLegendOathTitle: {
+    color: TITLE_COLOR,
+    fontWeight: '700',
+    marginBottom: 16,
+  },
   templeLegendDonutWrap: { alignItems: 'center', justifyContent: 'center' },
   templeLegendOathLegend: {
     flexDirection: 'row',
     justifyContent: 'center',
     gap: 20,
   },
-  templeLegendOathLegendItem: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  templeLegendOathLegendItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
   templeLegendOathDot: { width: 10, height: 10, borderRadius: 5 },
   templeLegendOathLegendText: { color: '#fff', fontSize: 13 },
 });

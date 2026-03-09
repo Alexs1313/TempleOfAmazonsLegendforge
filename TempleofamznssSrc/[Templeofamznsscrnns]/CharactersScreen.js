@@ -99,7 +99,7 @@ const CharactersScreen = () => {
   const headerPadT = pick(44, 52, 60);
   const settingsBtnSize = pick(44, 50, 56);
 
-  const tabTextSize = pick(12, 13, 14);
+  const tabTextSize = pick(8, 10, 14);
   const storyCardMarginH = sidePad;
   const storyCardPad = pick(12, 14, 16);
   const storyCardMarginT = pick(12, 14, 16);
@@ -353,7 +353,7 @@ const CharactersScreen = () => {
                     { fontSize: tabTextSize },
                   ]}
                 >
-                  The Temple of Amazons
+                  Amazons
                 </Text>
               </LinearGradient>
             ) : (
@@ -369,7 +369,7 @@ const CharactersScreen = () => {
                     { fontSize: tabTextSize },
                   ]}
                 >
-                  The Temple of Amazons
+                  Amazons
                 </Text>
               </View>
             )}

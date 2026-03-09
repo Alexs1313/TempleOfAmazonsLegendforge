@@ -2,10 +2,9 @@
 
 import { libraryStories } from '../Templeofamznsddta/libraryStories';
 import { useAdaptiveSizes } from '../[Templeofamznshkks]/useAdaptiveSizes';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import React, { useCallback, useRef } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
 import {
-  Animated,
   View,
   Image,
   StyleSheet,
@@ -30,27 +29,6 @@ const TempleLibrary = () => {
   const cardTitleMarginT = pick(6, 7, 8);
   const headerPadT = pick(44, 52, 60);
   const settingsBtnSize = pick(44, 50, 56);
-  const cardAppearFromY = pick(20, 22, 24);
-
-  const templeLegendCardAnimations = useRef(
-    libraryStories.map(() => new Animated.Value(0)),
-  ).current;
-
-  useFocusEffect(
-    useCallback(() => {
-      templeLegendCardAnimations.forEach(anim => anim.setValue(0));
-
-      const templeLegendStaggerAnimations = templeLegendCardAnimations.map(anim =>
-        Animated.timing(anim, {
-          toValue: 1,
-          duration: 360,
-          useNativeDriver: true,
-        }),
-      );
-
-      Animated.stagger(120, templeLegendStaggerAnimations).start();
-    }, [templeLegendCardAnimations]),
-  );
 
   return (
     <ImageBackground
@@ -91,7 +69,7 @@ const TempleLibrary = () => {
           <View style={{ marginBottom: titleMarginB }} />
 
           <View style={styles.templeLegendCardsWrap}>
-            {libraryStories.map((item, index) => (
+            {libraryStories.map(item => (
               <LibraryStoryCard
                 key={item.id}
                 story={item}
@@ -105,17 +83,6 @@ const TempleLibrary = () => {
                 imageBorderRadius={16}
                 titleFontSize={cardTitleSize}
                 titleMarginTop={cardTitleMarginT}
-                animatedStyle={{
-                  opacity: templeLegendCardAnimations[index],
-                  transform: [
-                    {
-                      translateY: templeLegendCardAnimations[index].interpolate({
-                        inputRange: [0, 1],
-                        outputRange: [cardAppearFromY, 0],
-                      }),
-                    },
-                  ],
-                }}
               />
             ))}
           </View>

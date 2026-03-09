@@ -27,6 +27,7 @@ export default function BeginModal({
       transparent
       animationType="fade"
       onRequestClose={onClose}
+      statusBarTranslucent={Platform.OS === 'android'}
     >
       {Platform.OS === 'ios' && (
         <BlurView
@@ -83,7 +84,7 @@ export default function BeginModal({
 const styles = StyleSheet.create({
   templeLegendOverlay: {
     flex: 1,
-    // backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: Platform.OS === 'ios' ? null : 'rgba(0, 0, 0, 0.44)',
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 24,

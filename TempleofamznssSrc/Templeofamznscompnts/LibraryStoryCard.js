@@ -1,10 +1,7 @@
 // Library Story Card
 
 import React from 'react';
-import { Text, Image, TouchableOpacity, StyleSheet, Animated } from 'react-native';
-
-const TempleLegendAnimatedTouchableOpacity =
-  Animated.createAnimatedComponent(TouchableOpacity);
+import { Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function LibraryStoryCard({
   story,
@@ -17,10 +14,9 @@ export default function LibraryStoryCard({
   titleFontSize = 14,
   titleMarginTop = 8,
   activeOpacity = 0.8,
-  animatedStyle,
 }) {
   return (
-    <TempleLegendAnimatedTouchableOpacity
+    <TouchableOpacity
       style={[
         styles.templeLegendCard,
         {
@@ -28,7 +24,6 @@ export default function LibraryStoryCard({
           marginBottom,
           borderRadius,
         },
-        animatedStyle,
       ]}
       activeOpacity={activeOpacity}
       onPress={onPress}
@@ -51,7 +46,7 @@ export default function LibraryStoryCard({
       >
         {story.title}
       </Text>
-    </TempleLegendAnimatedTouchableOpacity>
+    </TouchableOpacity>
   );
 }
 
