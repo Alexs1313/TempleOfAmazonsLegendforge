@@ -157,9 +157,9 @@ const LegendforgeOnboarding = () => {
               ]}
             >
               {LegendforgeTempleCurrentOnboardIndex === 0
-                ? `Beyond the stone gates stands a place where names become legends. The Temple of Amazons has watched centuries of warriors rise and fall`
+                ? `Beyond the stone gates stands a place where names become legends. The Temple has watched centuries of warriors rise and fall`
                 : LegendforgeTempleCurrentOnboardIndex === 1
-                ? `Here, Amazons are shaped by oath and fire. Their stories are not given — they are written by those who dare`
+                ? `Here, warriors are shaped by oath and fire. Their stories are not given — they are written by those who dare`
                 : `Create a warrior. Write her path. Enter the Temple, and leave your mark among the legends`}
             </Text>
 

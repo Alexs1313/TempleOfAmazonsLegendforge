@@ -49,7 +49,7 @@ const TempleSettingsScreen = () => {
 
   const LegendforgeTempleShareAppHandler = () => {
     Linking.openURL(
-      'https://apps.apple.com/us/app/temple-of-amazons-legendforge/id6760021296',
+      'https://apps.apple.com/us/app/amaz0ns-legendforge-of-t%D0%B5mple/id6760720393',
     );
   };
 
@@ -277,7 +277,7 @@ const TempleSettingsScreen = () => {
             <Image source={require('../assets/icons/ri_reset-left-line.png')} />
           </TouchableOpacity>
 
-          {Platform.OS === 'ios' && (
+          {/* {Platform.OS === 'ios' && (
             <TouchableOpacity
               style={[
                 styles.templeLegendBoxWrap,
@@ -302,7 +302,7 @@ const TempleSettingsScreen = () => {
                 Terms and Conditions
               </Text>
             </TouchableOpacity>
-          )}
+          )} */}
         </View>
       </ScrollView>
     </ImageBackground>
