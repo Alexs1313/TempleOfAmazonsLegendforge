@@ -49,7 +49,7 @@ const TempleSettingsScreen = () => {
 
   const LegendforgeTempleShareAppHandler = () => {
     Linking.openURL(
-      'https://apps.apple.com/us/app/amaz0ns-legendforge-of-t%D0%B5mple/id6760720393',
+      'https://apps.apple.com/us/app/amazin-legendforge-of-t%D0%B5mple/id6760720393',
     );
   };
 
