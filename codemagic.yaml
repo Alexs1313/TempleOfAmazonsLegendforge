@@ -1,6 +1,6 @@
 workflows:
   ios-workflow:
-    name: 'Amas0ns: Legendforge of Tеmple'
+    name: 'Amazin: Legendforge of Temple'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
